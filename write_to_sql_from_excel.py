@@ -29,19 +29,8 @@ cur = db.cursor()
 读取每个表里面的第一行的内容,作为表的字段名
 '''
 
-# while True:
-#     fname = input("请输入文件名称:")
-#     furl = '/home/tarena/excel_source/'+fname
-#
-#     try:
-#         data = xlrd.open_workbook(furl)
-#         print('文件打开成功')
-#         break
-#     except Exception:
-#         print('文件路径不存在')
-#         continue
-
-data = xlrd.open_workbook('/home/tarena/excel_source/infomations.xlsx')
+# 读取当前文件夹下的excel文件
+data = xlrd.open_workbook('./infomations.xlsx')
 print('获取对象成功')
 
 # 获取所有的表对象
